@@ -1,0 +1,48 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes border-blink {
+  0%, 50% { border-color: #BFAA2A; }
+  51%, 100% { border-color: transparent; }
+}
+
+.animate-border-blink {
+  animation: border-blink 1s infinite;
+}
+
+@keyframes neon-border {
+  0% {
+    transform: rotate(0deg);
+    border-color: #ffffff;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+  }
+  25% {
+    border-color: #ffffff;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+  }
+  50% {
+    border-color: #ffffff;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+  }
+  75% {
+    border-color: #ffffff;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+  }
+  100% {
+    border-color: #ffffff;
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff;
+  }
+}
+
+.neon-button {
+  position: relative;
+  animation: neon-border 2s ease-in-out infinite;
+  border: 2px solid #ffffff;
+  border-radius: 0.75rem;
+}
